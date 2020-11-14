@@ -1,4 +1,7 @@
 export function formatResult(screen, value) {
+  if(screen === 'err') {
+    screen = '';
+  }
   switch(value) {
     case 'CE':
       return '';
@@ -53,11 +56,15 @@ function minusReplacer(match, p1, p2, offset, string ) {
 }
 
 function getResult(str) {
+  if(!str) {
+    str = '';
+  }
   const toEval = str.replace(/\^/g, '**');
   console.log('toEval: ', toEval);
   try {
-    return eval(toEval);
+    const res = eval(toEval);
+    return res ? res : '';
   } catch {
-    return str;
+    return 'err';
   }
 }
