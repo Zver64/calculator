@@ -1,5 +1,5 @@
 export function formatResult(screen, value) {
-  if(screen === 'err') {
+  if(/[A-z]/.test(screen)) {
     screen = '';
   }
   switch(value) {
