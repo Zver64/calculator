@@ -1,0 +1,35 @@
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1em 1em auto;
+  grid-template-areas: 'screen screen screen screen screen' 'helpers helpers helpers helpers helpers' 'buttons buttons buttons operators operators';
+  grid-gap: 0.3em;
+  width: 300px;
+  height: 300px;
+  font-size: 2em;
+  line-height: 1;
+  background-color: grey;
+  padding: 0.5em;
+  &__screen {
+    grid-area: screen;
+    min-height: 1em;
+    background-color: white;
+    text-align: right;
+  }
+  &__buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr
+  }
+  &__operators {
+    grid-area: operators;
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+  }
+  &__helpers {
+    grid-area: helpers;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.3em;
+  }
+}
