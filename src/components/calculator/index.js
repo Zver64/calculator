@@ -25,17 +25,18 @@ export default memo(() => {
         <Button value="7" onClick={handleButtonClick} />
         <Button value="8" onClick={handleButtonClick} />
         <Button value="9" onClick={handleButtonClick} />
-        <Button value="-" onClick={handleButtonClick} />
         <Button value="0" onClick={handleButtonClick} />
         <Button value="." onClick={handleButtonClick} />
+        <Button value="=" onClick={handleButtonClick} />
       </div>
       <div className="calculator__operators">
         <Button value="+" onClick={handleButtonClick} />
         <Button value="-" onClick={handleButtonClick} />
         <Button value="*" onClick={handleButtonClick} />
         <Button value="/" onClick={handleButtonClick} />
-        <Button value="(" onClick={handleButtonClick} />
+        <Button value="^" onClick={handleButtonClick} />
         <Button value=")" onClick={handleButtonClick} />
+        <Button value="(" onClick={handleButtonClick} />
       </div>
     </div>
   );
