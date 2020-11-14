@@ -60,7 +60,6 @@ function getResult(str) {
     str = '';
   }
   const toEval = str.replace(/\^/g, '**');
-  console.log('toEval: ', toEval);
   try {
     const res = eval(toEval);
     return res ? res : '';
